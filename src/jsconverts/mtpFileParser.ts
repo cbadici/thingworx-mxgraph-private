@@ -25,7 +25,7 @@ export class MtpFileParser {
         };
 
         // find a referece to the diagram object
-        //const hmiDiagramXml = file.querySelector('InstanceHierarchy[Name="HMI"] InternalElement[Name="Kat_Formulierung"]');
+       
         //We consider the first InternalElement element from the HMI node as the HMI diagram in order not to add a widget property in the Composer
         const hmiDiagramXml = file.querySelector('InstanceHierarchy[Name="HMI"] InternalElement');
         if (!hmiDiagramXml) {
