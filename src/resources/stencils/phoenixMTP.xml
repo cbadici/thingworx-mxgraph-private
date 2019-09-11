@@ -1,0 +1,561 @@
+<shapes name="mxgraph.custom.shapes">
+    <shape h="40" name="Pumpe" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y=" 0.5"/>
+            <constraint x="0.5" y=" 0"/>
+            <constraint x="1" y=" 0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="40" w="40" x="0" y="0"/>
+            <fillcolor color="#FFFFFFFF"/>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="20" y="0"/>
+                <line x="40" y="20"/>
+                <line x="20" y="40"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Kompressor" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y=" 0.5"/>
+            <constraint x="1" y=" 0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="40" w="40"/>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="13" y="2"/>
+                <line x="39" y="17"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="13" y="38"/>
+                <line x="39" y="23"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Ventil" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="20" y="20"/>
+                <line x="40" y="10"/>
+                <line x="40" y="30"/>
+                <line x="0" y="10"/>
+                <line x="0" y="30"/>
+                <line x="20" y="20"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Kontrollventil" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="20" y="20"/>
+                <line x="20" y="10"/>
+                <line x="10" y="10"/>
+                <arc rx="5" ry="5" sweep-flag="1" x="30" y="10"/>
+                <line x="20" y="10"/>
+                <move x="0" y="10"/>
+                <line x="0" y="30"/>
+                <line x="40" y="10"/>
+                <line x="40" y="30"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Druckminderer" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="5" w="5" x="22.5" y="17.5"/>
+            <fillcolor color="black"/>
+            <strokecolor color="black"/>
+            <fillstroke/>
+            <path>
+                <move x="0" y="5"/>
+                <line x="0" y="35"/>
+                <line x="25" y="20"/>
+                <line x="40" y="13"/>
+                <line x="40" y="28"/>
+                <line x="25" y="20"/>
+                <line x="0" y="5"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="60" name="Sicherheitsventil" strokewidth="inherit" w="35">
+        <connections>
+            <constraint x="0.3" y=" 0"/>
+            <constraint x="0.3" y=" 1"/>
+            <constraint x="1" y=" 0.57"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="5" w="5" x="7.5" y="33.5"/>
+            <fillcolor color="black"/>
+            <strokecolor color="black"/>
+            <fillstroke/>
+            <path>
+                <move x="20" y="28"/>
+                <line x="20" y="42"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="23" y="35"/>
+                <line x="35" y="35"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="10" y="60"/>
+                <line x="10" y="48"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="3.75" y="47.5"/>
+                <line x="10" y="35"/>
+                <line x="16.25" y="47.5"/>
+                <close/>
+                <move x="10" y="35"/>
+                <line x="10" y="35"/>
+                <line x="10" y="29"/>
+                <line x="3" y="26"/>
+                <line x="17" y="20"/>
+                <line x="3" y="14"/>
+                <line x="17" y="8"/>
+                <line x="10" y="5"/>
+                <line x="10" y="0"/>
+                <move x="10" y="35"/>
+                <line x="22.5" y="28.75"/>
+                <line x="22.5" y="41.25"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Messgerät" strokewidth="inherit" w="60">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+            <constraint x="0.5" y="0"/>
+            <constraint x="0.5" y="1"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="20" y="0"/>
+                <arc rx="10" ry="10" sweep-flag="0" x="20" y="40"/>
+                <line x="40" y="40"/>
+                <arc rx="10" ry="10" sweep-flag="0" x="40" y="0"/>
+                <close/>
+                <move x="0" y="20"/>
+                <line x="60" y="20"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="320" name="Reaktor" strokewidth="inherit" w="120">
+        <connections>
+            <constraint x="0.25" y="0"/>
+            <constraint x="0.5" y="0"/>
+            <constraint x="0.75" y="0"/>
+            <constraint x="0" y="0.0625"/>
+            <constraint x="0" y="0.1875"/>
+            <constraint x="0" y="0.3125"/>
+            <constraint x="0" y="0.4375"/>
+            <constraint x="0" y="0.5625"/>
+            <constraint x="0" y="0.6875"/>
+            <constraint x="0" y="0.8125"/>
+            <constraint x="0" y="0.9375"/>
+            <constraint x="0.25" y="1"/>
+            <constraint x="0.5" y="1"/>
+            <constraint x="0.75" y="1"/>
+            <constraint x="1" y="0.0625"/>
+            <constraint x="1" y="0.1875"/>
+            <constraint x="1" y="0.3125"/>
+            <constraint x="1" y="0.4375"/>
+            <constraint x="1" y="0.5625"/>
+            <constraint x="1" y="0.6875"/>
+            <constraint x="1" y="0.8125"/>
+            <constraint x="1" y="0.9375"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="10" y="0"/>
+                <line x="10" y="320"/>
+                <line x="110" y="320"/>
+                <line x="110" y="0"/>
+                <close/>
+                <move x="0" y="10"/>
+                <line x="0" y="310"/>
+                <line x="120" y="310"/>
+                <line x="120" y="10"/>
+                <close/>
+                <move x="10" y="10"/>
+                <line x="110" y="310"/>
+                <line x="10" y="310"/>
+                <line x="110" y="10"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="120" name="Gasflasche N2" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="10" y="25"/>
+                <line x="10" y="10"/>
+                <arc rx="5" ry="5" sweep-flag="1" x="30" y="10"/>
+                <line x="30" y="25"/>
+                <move x="0" y="120"/>
+                <line x="0" y="45"/>
+                <arc rx="5" ry="5" sweep-flag="1" x="40" y="40"/>
+                <line x="40" y="120"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="120" name="Gasflasche EO" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="20" y="0"/>
+                <line x="20" y="110"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="10" y="25"/>
+                <line x="10" y="10"/>
+                <arc rx="5" ry="5" sweep-flag="1" x="30" y="10"/>
+                <line x="30" y="25"/>
+                <move x="0" y="120"/>
+                <line x="0" y="45"/>
+                <arc rx="5" ry="5" sweep-flag="1" x="40" y="40"/>
+                <line x="40" y="120"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Input" strokewidth="inherit" w="60">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="0" y="0"/>
+                <line x="0" y="40"/>
+                <line x="50" y="40"/>
+                <line x="60" y="20"/>
+                <line x="50" y="0"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Output" strokewidth="inherit" w="60">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="10" y="0"/>
+                <line x="0" y="20"/>
+                <line x="10" y="40"/>
+                <line x="60" y="40"/>
+                <line x="60" y="0"/>
+                <close/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="T-Stück" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0" y="0.5"/>
+            <constraint x="1" y="0.5"/>
+            <constraint x="0.5" y="1"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="20" y="40"/>
+                <line x="20" y="20"/>
+                <move x="0" y="20"/>
+                <line x="40" y="20"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Messpunkt" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0.5" y="0.5"/>
+        </connections>
+        <background/>
+        <foreground>
+            <rect h="6" w="6" x="17" y="17"/>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Motor" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+            <constraint x="0.5" y=" 1"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="40" w="40"/>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="15" y="25"/>
+                <line x="15" y="15"/>
+                <line x="20" y="25"/>
+                <line x="25" y="15"/>
+                <line x="25" y="25"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="90" name="Wärmetauscher" strokewidth="inherit" w="40">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+            <constraint x="0.5" y=" 1"/>
+            <constraint x="0" y=" 0.2"/>
+            <constraint x="0" y=" 0.8"/>
+            <constraint x="1" y=" 0.2"/>
+            <constraint x="1" y=" 0.8"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="0" y="5"/>
+                <arc rx="23" ry="10" sweep-flag="0" x="40" y="5"/>
+                <line x="40" y="85"/>
+                <arc rx="23" ry="10" sweep-flag="1" x="0" y="85"/>
+                <close/>
+                <move x="20" y="90"/>
+                <line x="20" y="75"/>
+                <line x="10" y="68"/>
+                <line x="30" y="53"/>
+                <line x="10" y="38"/>
+                <line x="30" y="23"/>
+                <line x="20" y="15"/>
+                <line x="20" y="0"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="40" name="Wärmeübertrager" strokewidth="inherit" w="50">
+        <connections>
+            <constraint x="1" y=" 0.2"/>
+            <constraint x="1" y=" 0.8"/>
+        </connections>
+        <background/>
+        <foreground>
+            <ellipse h="40" w="40"/>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="50" y="8"/>
+                <line x="13" y="8"/>
+                <line x="25" y="20"/>
+                <line x="13" y="33"/>
+                <line x="50" y="33"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="220" name="Sammelbehälter" strokewidth="inherit" w="120">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+            <constraint x="0.21" y=" 0"/>
+            <constraint x="0.79" y=" 0"/>
+        </connections>
+        <background/>
+        <foreground>
+            <rect h="205" w="100" x="10" y="0"/>
+            <stroke/>
+            <path>
+                <move x="0" y="15"/>
+                <line x="120" y="15"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="0" y="190"/>
+                <line x="120" y="190"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="25" y="0"/>
+                <line x="25" y="175"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="220" name="Behälter" strokewidth="inherit" w="120">
+        <connections>
+            <constraint x="0.5" y=" 0"/>
+            <constraint x="0.1" y=" 0"/>
+            <constraint x="0.9" y=" 0"/>
+            <constraint x="0.3" y=" 0"/>
+            <constraint x="0.7" y=" 0"/>
+        </connections>
+        <background/>
+        <foreground>
+            <rect h="205" w="100" x="10" y="0"/>
+            <stroke/>
+            <path>
+                <move x="0" y="15"/>
+                <line x="120" y="15"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="0" y="190"/>
+                <line x="120" y="190"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="10" y="125"/>
+                <line x="110" y="125"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="45" y="130"/>
+                <line x="75" y="130"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="53" y="135"/>
+                <line x="68" y="135"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="58" y="140"/>
+                <line x="63" y="140"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="60" y="130"/>
+                <line x="68" y="115"/>
+                <line x="53" y="115"/>
+                <line x="60" y="130"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape h="150" name="Rührreaktor" strokewidth="inherit" w="150">
+        <connections>
+            <constraint x="0.1" y=" -0.01"/>
+            <constraint x="0.2" y=" -0.01"/>
+            <constraint x="0.3" y=" -0.01"/>
+            <constraint x="0.4" y=" -0.01"/>
+            <constraint x="0.5" y=" -0.01"/>
+            <constraint x="0.6" y=" -0.01"/>
+            <constraint x="0.7" y=" -0.01"/>
+            <constraint x="0.8" y=" -0.01"/>
+            <constraint x="0.9" y=" -0.01"/>
+            <constraint x="0.13" y=" 0.15"/>
+            <constraint x="0.87" y=" 0.15"/>
+            <constraint x="0.04" y=" 0.25"/>
+            <constraint x="0.04" y=" 0.8"/>
+            <constraint x="0.96" y=" 0.25"/>
+            <constraint x="0.96" y=" 0.8"/>
+            <constraint x="0.5" y=" 0.94"/>
+        </connections>
+        <background/>
+        <foreground>
+            <path>
+                <move x="75" y="0"/>
+                <line x="75" y="112"/>
+            </path>
+            <strokecolor color="black"/>
+            <stroke/>
+            <path>
+                <move x="7" y="5"/>
+                <line x="7" y="0"/>
+                <line x="143" y="0"/>
+                <line x="143" y="5"/>
+                <line x="7" y="5"/>
+                <line x="7" y="10"/>
+                <line x="143" y="10"/>
+                <line x="143" y="5"/>
+            </path>
+            <stroke/>
+            <rect h="55" w="7" x="0" y="50"/>
+            <stroke/>
+            <rect h="55" w="7" x="143" y="50"/>
+            <stroke/>
+            <path>
+                <move x="130.5" y="10"/>
+                <line x="130.5" y="120"/>
+                <arc rx="23" ry="8" sweep-flag="1" x="19.5" y="120"/>
+                <line x="19.5" y="10"/>
+                <move x="55" y="95"/>
+                <line x="55" y="102"/>
+                <arc rx="23" ry="28" sweep-flag="0" x="95" y="102"/>
+                <line x="95" y="95"/>
+                <move x="19.5" y="15"/>
+                <line x="7" y="25"/>
+                <line x="7" y="132"/>
+                <arc rx="60" ry="30" sweep-flag="0" x="70" y="150"/>
+                <line x="75" y="140"/>
+                <line x="80" y="150"/>
+                <arc rx="60" ry="30" sweep-flag="0" x="143" y="132"/>
+                <line x="143" y="25"/>
+                <line x="130.5" y="15"/>
+
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+</shapes>
+
