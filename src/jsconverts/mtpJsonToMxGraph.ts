@@ -65,15 +65,19 @@ export class MtpJsonToMxGraph {
                     element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]}`);
             }
             if (element.communication) {
-                // draw the parent first 
-                let elParent = graph.insertVertex(parent, element.communication.id, element.communication.name, element.obj.x, element.obj.y,
-                    element.obj.width, element.obj.height, "swimlane;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;collapsible=1;resizeParentMax=0;resizeLast=0;");
-                elParent.collapsed = true;
                 // if we have communication elements, draw them in the container
                 for (const commInterface of element.communication.interfaces) {
-                    let value = document.createElement("Value");
-                    value.setAttribute('label', commInterface.name);
-                    let cell = graph.insertVertex(elParent, commInterface.id, value, 0, 0, element.obj.width, 20, "interfaceValue");
+                    if (commInterface.name === "V" || commInterface.name === "PV") {
+                        // draw the parent first 
+                        let elParent = graph.insertVertex(parent, element.communication.id, element.obj.name, element.obj.x, element.obj.y,
+                        element.obj.width, element.obj.height, "swimlane;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;collapsible=1;resizeParentMax=0;resizeLast=0;");
+                        //elParent.collapsed = true;
+                        elParent.collapsed = false;
+
+                        let value = document.createElement("Value");
+                        value.setAttribute('label', commInterface.name);
+                        let cell = graph.insertVertex(elParent, commInterface.id, value, 0, 0, element.obj.width, 20, "interfaceValue");
+                    }
                 }
             }
         }
@@ -125,7 +129,6 @@ export class MtpJsonToMxGraph {
         graph.setCellsDeletable(true);
         graph.setDropEnabled(true);
         graph.setSplitEnabled(false);
-        graph.setGridEnabled(false);
         graph.resetEdgesOnConnect = false;
 
         this.declareMxGraphStyles(graph);

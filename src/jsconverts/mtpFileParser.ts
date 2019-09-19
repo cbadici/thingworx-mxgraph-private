@@ -25,7 +25,7 @@ export class MtpFileParser {
         };
 
         // find a referece to the diagram object
-       
+        //const hmiDiagramXml = file.querySelector('InstanceHierarchy[Name="HMI"] InternalElement[Name="Kat_Formulierung"]');
         //We consider the first InternalElement element from the HMI node as the HMI diagram in order not to add a widget property in the Composer
         const hmiDiagramXml = file.querySelector('InstanceHierarchy[Name="HMI"] InternalElement');
         if (!hmiDiagramXml) {
@@ -97,7 +97,7 @@ export class MtpFileParser {
         }
 
         // we need to now search for the communication
-        let communicationElementAttr = file.evaluate(`//InstanceHierarchy[@Name="ModuleTypePackage"]//InternalElement[@Name="Communication"]` +
+        let communicationElementAttr = file.evaluate(`//InstanceHierarchy[@Name="ModuleTypePackage"]//InternalElement[@Name="CommunicationSet"]` +
             `/InternalElement[@Name="InstanceList"]//Attribute[@Name="RefID"][Value="${visualElement.refId}"]`,
             file, null, XPathResult.ANY_TYPE, null).iterateNext();
         let communicationElement = communicationElementAttr ? communicationElementAttr.parentElement : undefined;
@@ -111,7 +111,7 @@ export class MtpFileParser {
                 if (attrElement.nodeName == "Attribute" && attrElement.getAttribute("Node") != "RefID") {
                     let attrValue = attrElement.getElementsByTagName("Value")[0].textContent;
                     // search for this attribute in the communication lib
-                    let sourceCommunicationElement = file.querySelector(`InstanceHierarchy[Name="ModuleTypePackage"] InternalElement[Name="Communication"] ` +
+                    let sourceCommunicationElement = file.querySelector(`InstanceHierarchy[Name="ModuleTypePackage"] InternalElement[Name="CommunicationSet"] ` +
                         `InternalElement[Name="SourceList"]  ExternalInterface[ID="${attrValue}"]`);
                     if (sourceCommunicationElement) {
                         interfaceList.push({
