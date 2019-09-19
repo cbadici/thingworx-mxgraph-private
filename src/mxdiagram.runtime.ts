@@ -181,7 +181,7 @@ TW.Runtime.Widgets.mxdiagram = function () {
                     var strokeColor = graphCells[i].strokeColor;
 
                     var cell = this.getGraphCell(this.graph.getModel().cells, cellId);
-                    cell.setAttribute("label", value);
+                    cell.value.setAttribute("value", value);
                     var style = cell.getStyle();
                     this.setCellColor(cell, fillColor, "fillColor");
                     this.setCellColor(cell, strokeColor, "strokeColor");
@@ -235,8 +235,7 @@ TW.Runtime.Widgets.mxdiagram = function () {
                                 let cell = graph.getModel().getCell(row.elementId);
                                 if (cell && cell.hasAttribute("label")) {
                                     cell.setAttribute("value", isNaN(row.value) ? row.value : parseFloat(row.value).toFixed(2));
-                                    graph.getModel().setValue(cell, cell.value);
-                                    
+                                    graph.getModel().setValue(cell, cell.value);  
                                 }
                             }
                             break;
@@ -247,12 +246,13 @@ TW.Runtime.Widgets.mxdiagram = function () {
     this.setCellColor = function (cell, color, colorType) {
         var style = cell.getStyle();
         let newStyle:string;
+        
         //there is a posibility that the style of the element does not contain any color information.
         //1. When the style contains color information
         if (style.indexOf(colorType + "=")!=-1)
         {
         var styleBeforeColor = style.substring(0, style.indexOf(colorType + "=") + (colorType + "=").length);
-        var styleAfterColor = style.substring(style.indexOf(colorType + "=") + (colorType + "=").length + "#ffffff".length, style.length);
+        var styleAfterColor = style.substring(style.indexOf(colorType + "=") + (colorType + "=").length + color.length, style.length);
         newStyle = styleBeforeColor + color + styleAfterColor;
         }
         //2. When the style does not contain color information
