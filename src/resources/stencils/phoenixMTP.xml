@@ -168,6 +168,7 @@
         </connections>
         <background/>
         <foreground>
+            
             <path>
                 <move x="20" y="0"/>
                 <arc rx="10" ry="10" sweep-flag="0" x="20" y="40"/>
@@ -177,6 +178,7 @@
                 <move x="0" y="20"/>
                 <line x="60" y="20"/>
             </path>
+            <fillstroke/>
             <stroke/>
         </foreground>
     </shape>
