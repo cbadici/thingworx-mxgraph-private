@@ -4,7 +4,7 @@ export const STENCIL_PATH = "/Thingworx/Common/extensions/mxdiagram_ExtensionPac
 export const STENCIL_LIST = ['agitators.xml', 'apparatus_elements.xml', 'agitators.xml', 'centrifuges.xml', 'compressors.xml',
     'compressors_iso.xml', 'crushers_grinding.xml', 'driers.xml', 'engines.xml', 'feeders.xml', 'filters.xml', 'fittings.xml',
     'flow_sensors.xml', 'heat_exchangers.xml', 'instruments.xml', 'misc.xml', 'mixers.xml', 'piping.xml', 'feeders.xml', 'feeders.xml',
-    'pumps.xml', 'pumps_din.xml', 'pumps_iso.xml', 'separators.xml', 'shaping_machines.xml', 'valves.xml', 'vessels.xml','phoenixMTP.xml'];
+    'pumps.xml', 'pumps_din.xml', 'pumps_iso.xml', 'separators.xml', 'shaping_machines.xml', 'valves.xml', 'vessels.xml','phoenixMTP.xml','custom.xml'];
 
     import { mxgraph } from "../generic/mxGraphImport"
     import * as JD from "./mtpJsonDefs"
@@ -45,6 +45,7 @@ export class MtpJsonToMxGraph {
         }
     }
 
+    
     private drawElements(graph: any, parent: any, elements: JD.InteractibleElement[]) {
         for (const element of elements) {
             if (element.obj.subElement) {
@@ -63,7 +64,10 @@ export class MtpJsonToMxGraph {
                 // if we don't have a subelement, draw the visual object directly
                 graph.insertVertex(parent, element.obj.id, element.obj.name, element.obj.x, element.obj.y,
                     element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]}`);
+                //adding lock icon; lock icon is positioned at x+width (left side) and y (upper side)
+                graph.insertVertex(parent, element.obj.id+"#LockIcon", element.obj.name+"#LockIcon", element.obj.x+element.obj.width, element.obj.y,10/*width*/, 10 /*height*/, `element;shape=custom.bin(small)`);
             }
+
             if (element.communication) {
                 // if we have communication elements, draw them in the container
                 for (const commInterface of element.communication.interfaces) {

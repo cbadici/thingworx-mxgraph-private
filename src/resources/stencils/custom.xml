@@ -1,0 +1,19 @@
+<shapes name="custom">
+<shape aspect="variable" h="10" name="Bin(small)" strokewidth="inherit" w="10">
+    <connections/>
+    <background>
+        <path>
+            <move x="0" y="0"/>
+            <line x="10" y="0"/>
+            <line x="10" y="4"/>
+            <line x="7.5" y="6.5"/>
+            <line x="2.5" y="6.5"/>
+            <line x="0" y="4"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fillstroke/>
+    </foreground>
+</shape>
+</shapes>

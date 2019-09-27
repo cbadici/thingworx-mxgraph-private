@@ -59,7 +59,6 @@ export class MtpFileParser {
         let visualElement: JD.VisualObject = {
             viewType: this.getAttributeTagValue(element, "ViewType", false),
             eClassVersion: this.getAttributeTagValue(element, "eClassVersion", false),
-            //eClassClassification: this.getAttributeTagValue(element, "eClassClassificationClass", false),
             //we enhance the eClassClassification to contain also the ViewType, in case the eClassClassification does not contain a valid eclass (meaning it is equal to 0)
             //this eClassClassification is used in other widget part to map the element to a specific icon
             eClassClassification: this.getAttributeTagValue(element, "eClassClassificationClass", false)!="0"?this.getAttributeTagValue(element, "eClassClassificationClass", false):this.getAttributeTagValue(element, "ViewType", false),
