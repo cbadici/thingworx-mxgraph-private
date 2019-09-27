@@ -64,8 +64,8 @@ export class MtpJsonToMxGraph {
                 // if we don't have a subelement, draw the visual object directly
                 graph.insertVertex(parent, element.obj.id, element.obj.name, element.obj.x, element.obj.y,
                     element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]}`);
-                //adding lock icon; lock icon is positioned at x+width (left side) and y (upper side)
-                graph.insertVertex(parent, element.obj.id+"#LockIcon", element.obj.name+"#LockIcon", element.obj.x+element.obj.width, element.obj.y,10/*width*/, 10 /*height*/, `element;shape=custom.bin(small)`);
+                //adding lock icon; lock icon is positioned at x+width+2pixels (left side) and y (upper side)
+                graph.insertVertex(parent, element.obj.id+"#LockIcon", element.obj.name+"#LockIcon", element.obj.x+element.obj.width+2, element.obj.y,10/*width*/, 10 /*height*/, `element;shape=custom.bin(small)`);
             }
 
             if (element.communication) {
