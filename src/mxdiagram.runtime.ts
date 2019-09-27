@@ -166,6 +166,9 @@ TW.Runtime.Widgets.mxdiagram = function () {
                 this.setNewActiveGraph(currentGraph);
                 break;
             }
+            //this is the state based formatting that is applied to specific cells.
+            //this needs to be filled with a JSON containing id, value, fillColor and strokeColor as keys; eg: var result = [{"id":"0659fb1f-b4e9-4854-9b87-4fee135ffa57", "value":25, "fillColor":"red", "strokeColor":"blue"}];
+            //color can be readable names, or hex
             case 'JSONArrayGraphCells': {
                 if (this.graph == null) {
                     break;
