@@ -1,6 +1,6 @@
 {
     "name": "mxdiagram",
-    "version": "0.0.314",
+    "version": "0.0.315",
     "description": "Widget to display draw.io diagrams or value process diagrams",
     "thingworxServer": "http://mun-ittemp1l23",
     "thingworxUser": "vrosu",
