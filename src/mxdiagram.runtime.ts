@@ -335,9 +335,13 @@ TW.Runtime.Widgets.mxdiagram = function () {
                 if (cell) {
                     if (cell.value && cell.value.getAttribute) {
                         thisWidget.setProperty("SelectedCellId", cell.value.getAttribute("customId"));
+                        
                         thisWidget.jqElement.triggerHandler('SelectedCellChanged');
                     } else {
+                        thisWidget.setProperty("SelectedCellName", cell.id);
                         thisWidget.setProperty("SelectedCellId", cell.id);
+                        
+
                         thisWidget.jqElement.triggerHandler('SelectedCellChanged');
                     }
                 }

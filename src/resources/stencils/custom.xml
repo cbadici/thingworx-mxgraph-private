@@ -1,19 +1,24 @@
 <shapes name="custom">
-<shape aspect="variable" h="10" name="Bin(small)" strokewidth="inherit" w="10">
-    <connections/>
-    <background>
-        <path>
-            <move x="0" y="0"/>
-            <line x="10" y="0"/>
-            <line x="10" y="4"/>
-            <line x="7.5" y="6.5"/>
-            <line x="2.5" y="6.5"/>
-            <line x="0" y="4"/>
-            <close/>
-        </path>
-    </background>
-    <foreground>
-        <fillstroke/>
-    </foreground>
+<shape h="10" w="10" aspect="variable" strokewidth="inherit" name="Bin(small)">
+  <background>
+<path>
+<move x="4" y="4"/>
+  <curve x1="4" y1="4" x2="2" y2="2" x3="5" y3="1"/>
+ <curve x1="5" y1="1" x2="8" y2="2" x3="6" y3="4"/>
+  
+</path>
+<stroke/>
+
+    <roundrect x="0" y="0" w="10" h="10" arcsize="0.5"/>
+
+<stroke/>
+    <rect x="4" y="4" w="2" h="5"/>
+    <stroke/>
+  </background>
+  <foreground>
+
+  </foreground>
 </shape>
+
+
 </shapes>

@@ -70,9 +70,12 @@
         eClassVersion: string;
         eClassClassification: string;
         eClassIrdi: string;
+        viewTypeAndName:string;
         refId: string;
         nozzles: Nozzle[];
         subElement?: Shape;
+        //This is used only for drawing the lock. It will be set to true for items of type AnaDrv
+        hasLockIcon: boolean;
     }
     
    export interface PipeDefinition extends GenericMptElement {

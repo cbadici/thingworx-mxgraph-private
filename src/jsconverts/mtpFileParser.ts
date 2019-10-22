@@ -72,7 +72,10 @@ export class MtpFileParser {
             x: this.getAttributeTagValue(element, "X", true),
             y: this.getAttributeTagValue(element, "Y", true),
             nozzles: nozzles,
-            type: JD.ElementType.VISUAL_ELEMENT
+            type: JD.ElementType.VISUAL_ELEMENT,
+            viewTypeAndName:this.getAttributeTagValue(element, "ViewType", false),
+            //True only if the item type is AnaDrv
+            hasLockIcon: this.getAttributeTagValue(element, "ViewType", false)=="MTPDataObjectSUCLib/DataAssembly/AnaDrv"?true:false
         };
         // find the elements that are real nozzles 
         let realNozzles = nozzles.filter((el) => { return el.baseClass == "MTPHMISUCLib/PortObject/Nozzle" });

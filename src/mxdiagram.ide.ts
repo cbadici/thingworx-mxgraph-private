@@ -132,6 +132,13 @@ TW.IDE.Widgets.mxdiagram = function () {
                     'isVisible': true,
                     'isBindingSource': true
                 },
+                'SelectedCellName': {
+                    'description': 'Selected cell viewtype+name. Example:AnaMon_TI007',
+                    'baseType': 'STRING',
+                    'isVisible': true,
+                    'isBindingSource': true
+                },
+               
                 'AutoLayout': {
                     'description': 'The layout to be applied to loaded XML.',
                     'baseType': 'STRING',
