@@ -58,12 +58,13 @@ export class MtpJsonToMxGraph {
               /*   graph.insertVertex(parent, element.obj.id, element.obj.name, element.obj.subElement.x - elementOffsetX, element.obj.subElement.y - elementOffsetY,
                     element.obj.subElement.width, element.obj.subElement.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]};rotation=${element.obj.rotation}`);
               */
+              
                         graph.insertVertex(parent, element.obj.id, element.obj.name, element.obj.x , element.obj.y ,
-                            element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]};rotation=${element.obj.rotation}`);
+                            element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]};rotation=${element.obj.rotation};viewtypeandname=`+element.obj.viewTypeAndName);
             } else {
                 // if we don't have a subelement, draw the visual object directly
                 graph.insertVertex(parent, element.obj.id, element.obj.name, element.obj.x, element.obj.y,
-                    element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]}`);
+                    element.obj.width, element.obj.height, `element;shape=${this.shapeMap[element.obj.eClassClassification]};viewtypeandname=`+element.obj.viewTypeAndName);
                 //adding lock icon; lock icon is positioned at x+width+2pixels (left side) and y (upper side)
                 if (element.obj.hasLockIcon==true)
                 graph.insertVertex(parent, element.obj.id+"#LockIcon", element.obj.name+"#LockIcon", element.obj.x+element.obj.width+2, element.obj.y,10/*width*/, 10 /*height*/, `element;shape=custom.bin(small)`);

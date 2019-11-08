@@ -1,6 +1,6 @@
 {
     "name": "mxdiagram",
-    "version": "0.0.324",
+    "version": "0.0.343",
     "description": "Widget to display draw.io diagrams or value process diagrams",
     "thingworxServer": "http://mun-ittemp1l23",
     "thingworxUser": "vrosu",
@@ -48,7 +48,9 @@
         "webpack-cli": "^2.1.2",
         "webpack-dev-server": "^3.7.2",
         "xml2js": "^0.4.19",
-        "zip-webpack-plugin": "^3.0.0"
+        "zip-webpack-plugin": "^3.0.0",
+        "mem": ">=4.0.0",
+        "macaddress": ">=0.2.9"
     },
     "dependencies": {
         "cross-env": "^5.2.0",

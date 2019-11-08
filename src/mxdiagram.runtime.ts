@@ -333,12 +333,21 @@ TW.Runtime.Widgets.mxdiagram = function () {
                 var cell = cells[i];
 
                 if (cell) {
+                    let str_CellName:string;
+                    if (cell.style!=undefined && cell.style.split(";").length>1)
+                    {
+                        str_CellName = cell.style.split(";").find(function (element:string){ if (element.includes("viewtypeandname=")) return element}).split("=")[1];;
+                    }
+                    else 
+                    str_CellName=cell.value;
                     if (cell.value && cell.value.getAttribute) {
                         thisWidget.setProperty("SelectedCellId", cell.value.getAttribute("customId"));
-                        
+                        thisWidget.setProperty("SelectedCellName", str_CellName);
+
                         thisWidget.jqElement.triggerHandler('SelectedCellChanged');
                     } else {
-                        thisWidget.setProperty("SelectedCellName", cell.id);
+                        
+                        thisWidget.setProperty("SelectedCellName", str_CellName);
                         thisWidget.setProperty("SelectedCellId", cell.id);
                         
 
@@ -360,6 +369,8 @@ TW.Runtime.Widgets.mxdiagram = function () {
                     thisWidget.jqElement.triggerHandler('CellDoubleClicked');
                 }
             }
+            // based on Yannick's request we deselect an item as soon as it was double clicked, to allow the double click to work without manually clicking outside of the element
+            sender.clearSelection();
         });
     }
 

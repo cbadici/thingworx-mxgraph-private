@@ -19,6 +19,31 @@
 
   </foreground>
 </shape>
-
+<shape aspect="variable" h="95.38" name="Tank" strokewidth="inherit" w="51">
+    <connections/>
+    <background>
+        <path>
+            <move x="40" y="7.69"/>
+            <line x="40" y="87.69"/>
+            <arc large-arc-flag="0" rx="13" ry="5" sweep-flag="1" x="0" x-axis-rotation="0" y="87.69"/>
+            <line x="0" y="7.69"/>
+            <arc large-arc-flag="0" rx="13" ry="5" sweep-flag="1" x="40" x-axis-rotation="0" y="7.69"/>
+            <close/>
+        </path>
+    </background>
+    <foreground>
+        <fillstroke/>
+        <linejoin join="round"/>
+        <path>
+            <move x="0" y="7.69"/>
+            <line x="40" y="7.69"/>
+            <move x="0" y="87.69"/>
+            <line x="40" y="87.69"/>
+        </path>
+        <stroke/>
+       
+        <fillstroke/>
+    </foreground>
+</shape>
 
 </shapes>

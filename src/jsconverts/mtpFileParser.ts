@@ -56,8 +56,12 @@ export class MtpFileParser {
 
     private parseDiagramElement(element: Element, diagram: JD.HmiDiagram, file: Document) {
         let nozzles = this.getNozzleList(element);
+        //getting the viewType; eg: MTPDataObjectSUCLib/DataAssembly/BinVlv
+        let viewType = this.getAttributeTagValue(element, "ViewType", false);
+        //we need the shorter  view type in order to calculate the name; eg: BinVlv
+        let str_shortViewType = viewType.split("/")[viewType.split("/").length-1];
         let visualElement: JD.VisualObject = {
-            viewType: this.getAttributeTagValue(element, "ViewType", false),
+            viewType: viewType,
             eClassVersion: this.getAttributeTagValue(element, "eClassVersion", false),
             //we enhance the eClassClassification to contain also the ViewType, in case the eClassClassification does not contain a valid eclass (meaning it is equal to 0)
             //this eClassClassification is used in other widget part to map the element to a specific icon
@@ -73,9 +77,9 @@ export class MtpFileParser {
             y: this.getAttributeTagValue(element, "Y", true),
             nozzles: nozzles,
             type: JD.ElementType.VISUAL_ELEMENT,
-            viewTypeAndName:this.getAttributeTagValue(element, "ViewType", false),
+            viewTypeAndName:(str_shortViewType!=""?str_shortViewType:"NoViewType")+"_"+element.getAttribute("Name"),
             //True only if the item type is AnaDrv
-            hasLockIcon: this.getAttributeTagValue(element, "ViewType", false)=="MTPDataObjectSUCLib/DataAssembly/AnaDrv"?true:false
+            hasLockIcon: viewType=="MTPDataObjectSUCLib/DataAssembly/AnaDrv"?true:false
         };
         // find the elements that are real nozzles 
         let realNozzles = nozzles.filter((el) => { return el.baseClass == "MTPHMISUCLib/PortObject/Nozzle" });
